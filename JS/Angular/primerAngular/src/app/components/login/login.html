@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <div class="main-content">
+    <div class="login-card">
+      <!-- Avatar Superior Elevado -->
+      <div class="avatar-container">
+        <div class="avatar-circle">
+          <mat-icon>person</mat-icon>
+        </div>
+      </div>
+
+      <h1 class="login-title">MEMBER LOGIN</h1>
+
+      <form class="login-form">
+        <!-- Grupo de Entrada: Usuario -->
+        <div class="custom-input-group">
+          <div class="icon-addon">
+            <mat-icon>person</mat-icon>
+          </div>
+          <input type="text" placeholder="User" class="custom-input" name="username">
+        </div>
+
+        <!-- Grupo de Entrada: Contraseña -->
+        <div class="custom-input-group">
+          <div class="icon-addon">
+            <mat-icon>lock</mat-icon>
+          </div>
+          <input type="password" placeholder="Password" class="custom-input" name="password">
+        </div>
+
+        <button type="submit" class="btn-login">Login</button>
+
+        <div class="login-options">
+          <label class="remember-me">
+            <input type="checkbox">
+            <span>Remember me?</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot Password</a>
+        </div>
+      </form>
+    </div>
+
+    <footer class="login-footer">
+      <p>Don't have an account?</p>
+      <button class="btn-register">REGISTER HERE</button>
+    </footer>
+  </div>
+</div>
