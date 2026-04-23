@@ -1,0 +1,27 @@
+.custom-footer {
+  width: 100%;
+  margin-top: auto; /* Empuja el footer al fondo si usas Flexbox en el contenedor padre */
+}
+
+.footer-content {
+  height: auto !important; /* Permite que crezca según el contenido */
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Para que sea responsivo en móviles */
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #303030; /* Un tono más oscuro */
+  color: white;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
