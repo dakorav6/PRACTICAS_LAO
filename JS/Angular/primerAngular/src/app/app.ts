@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { Login } from './components/login/login';
 import { Footer } from './components/footer/footer';
 import { Principal } from './components/principal/principal';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router'
 
 
 @Component({

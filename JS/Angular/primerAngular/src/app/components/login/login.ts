@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Necesario para el manejo de formularios (ej. ngModel)
 
@@ -8,6 +8,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
+
+
+import { Component, inject } from '@angular/core'; // Añadimos inject aquí
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -25,5 +30,12 @@ import { RouterLink } from '@angular/router';
   ]
 })
 export class Login {
+// AQUÍ, dentro de la clase, es donde usas inject()
+  private router = inject(Router); 
 
-}
+  validar() {
+    // Lógica
+    this.router.navigate(['/principal']);
+            }
+  
+  }
