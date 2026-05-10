@@ -27,7 +27,7 @@
           <input type="password" placeholder="Password" class="custom-input" name="password">
         </div>
 
-        <button routerLink="/principal" type="submit" class="btn-login">Login</button>
+        <button (click)="validarCuenta()" routerLink="/principal" type="submit" class="btn-login">Login</button>
 
         <div class="login-options">
           <label class="remember-me">

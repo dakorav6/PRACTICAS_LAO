@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 
 
-import { Component, inject } from '@angular/core'; // Añadimos inject aquí
+import { Component, inject, signal } from '@angular/core'; // Añadimos inject aquí
 import { Router } from '@angular/router';
 
 
@@ -31,11 +31,15 @@ import { Router } from '@angular/router';
 })
 export class Login {
 // AQUÍ, dentro de la clase, es donde usas inject()
-  private router = inject(Router); 
-
-  validar() {
-    // Lógica
-    this.router.navigate(['/principal']);
-            }
   
-  }
+usuario: string = '';
+
+
+
+validarCuenta(){
+  console.log("Validando cuenta...");
+
+
+}
+
+}
