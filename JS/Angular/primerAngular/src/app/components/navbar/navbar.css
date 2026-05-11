@@ -1,0 +1,40 @@
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+}

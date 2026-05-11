@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 
 
 import { Component, inject, signal } from '@angular/core'; // Añadimos inject aquí
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; 
 
 
 @Component({
@@ -32,13 +32,14 @@ import { Router } from '@angular/router';
 export class Login {
 // AQUÍ, dentro de la clase, es donde usas inject()
   
-usuario: string = '';
 
 
 
-validarCuenta(){
-  console.log("Validando cuenta...");
 
+validarCuenta(private miNavegacion: Router){}
+
+entrar(){
+this.miNavegacion.navigate(['/principal']);
 
 }
 

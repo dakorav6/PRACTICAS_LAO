@@ -1,16 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { Login } from './components/login/login';
-import { Footer } from './components/footer/footer';
-import { Principal } from './components/principal/principal';
 import { RouterOutlet } from '@angular/router'
-
+import { NavBarComponent } from './components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, Footer, Principal, RouterOutlet],
+  imports: [ RouterOutlet, NavBarComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('primerAngular');
+
 }
