@@ -1,0 +1,16 @@
+<div class="form-container">
+  <h2>Registro de Usuario</h2>
+  <mat-form-field><mat-label>Cédula</mat-label>
+    <input matInput [(ngModel)]="usuarioForm.cedula"></mat-form-field>
+  <mat-form-field><mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="usuarioForm.nombre"></mat-form-field>
+  <mat-form-field><mat-label>Apellido</mat-label>
+    <input matInput [(ngModel)]="usuarioForm.apellido"></mat-form-field>
+  <mat-form-field><mat-label>Contraseña</mat-label>
+    <input matInput type="password" [(ngModel)]="usuarioForm.password"></mat-form-field>
+
+  <div class="actions">
+    <button mat-raised-button color="accent" (click)="aceptar()">Aceptar</button>
+    <button mat-button (click)="salir()">Salir</button>
+  </div>
+</div>

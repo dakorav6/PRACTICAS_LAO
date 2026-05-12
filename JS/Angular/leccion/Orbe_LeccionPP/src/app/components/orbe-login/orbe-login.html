@@ -1,0 +1,23 @@
+<div class="login-wrapper">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Acceso al Sistema</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Usuario</mat-label>
+        <input matInput [(ngModel)]="acceso.usuario">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Clave</mat-label>
+        <input matInput type="password" [(ngModel)]="acceso.clave">
+      </mat-form-field>
+
+      <p *ngIf="mensaje" [ngClass]="esError ? 'error-msg' : 'success-msg'">{{ mensaje }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="validar()">INGRESAR</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

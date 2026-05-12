@@ -1,0 +1,30 @@
+<div class="main-container">
+  <div class="form-card">
+    <h2>Registro de Usuario</h2>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Cédula</mat-label>
+      <input matInput [(ngModel)]="usuarioForm.cedula" name="cedula">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="usuarioForm.nombre" name="nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Apellido</mat-label>
+      <input matInput [(ngModel)]="usuarioForm.apellido" name="apellido">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" [(ngModel)]="usuarioForm.password" name="password">
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button color="accent" (click)="aceptar()">Aceptar</button>
+      <button mat-stroked-button color="warn" (click)="salir()">Salir</button>
+    </div>
+  </div>
+</div>
