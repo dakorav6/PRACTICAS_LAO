@@ -33,12 +33,18 @@ export class Login {
 // AQUÍ, dentro de la clase, es donde usas inject()
   
 
+validarCuenta(){}
+
+miNavegacion: Router = inject(Router);
+
+usuario: string= ``;
+contrasena: string= ``;
 
 
+entrar():void {
 
-validarCuenta(private miNavegacion: Router){}
-
-entrar(){
+  
+if(this.usuario==`produ02` && this.contrasena==`erat1027`)  
 this.miNavegacion.navigate(['/principal']);
 
 }

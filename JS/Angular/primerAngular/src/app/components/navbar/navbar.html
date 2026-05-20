@@ -7,15 +7,10 @@
   <span class="spacer"></span>
 
   <nav class="desktop-nav">
-    @for (item of navItems; track item.path) {
-      <button mat-button 
-              [routerLink]="item.path" 
-              routerLinkActive="active-link"
-              [color]="item.isSpecial ? 'accent' : ''"
-              [class.mat-raised-button]="item.isSpecial">
-        {{ item.label }}
-      </button>
-    }
+    <button mat-button routerLink="/home" routerLinkActive="active-link">Inicio</button>
+    <button mat-button routerLink="/about" routerLinkActive="active-link">Acerca de</button>
+    <button mat-button routerLink="/contact" routerLinkActive="active-link">Contacto</button>
+    <button mat-button routerLink="/login" routerLinkActive="active-link" color="accent" class="mat-raised-button">Login</button>
   </nav>
 
   <!--  Menú para dispositivos móviles -->
@@ -25,11 +20,10 @@
   </button>
 
   <mat-menu #mobileMenu="matMenu">
-    @for (item of navItems; track item.path) {
-      <button mat-menu-item [routerLink]="item.path">
-        {{ item.label }}
-      </button>
-    }
+    <button mat-menu-item routerLink="/home">Inicio</button>
+    <button mat-menu-item routerLink="/about">Acerca de</button>
+    <button mat-menu-item routerLink="/contact">Contacto</button>
+    <button mat-menu-item routerLink="/login">Login</button>
   </mat-menu>
 
 </mat-toolbar>

@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component , inject} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { Login } from '../login/login';
+
 
 // Nombre semántico correcto en Angular
 interface NavigationItem {
@@ -22,6 +27,8 @@ interface NavigationItem {
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatDialogModule,
+    Login,
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
@@ -29,11 +36,16 @@ interface NavigationItem {
 export class NavBarComponent {
   public readonly appName = 'MiApp';
 
-  // Centralizamos TODO el menú, incluido el Login
-  public readonly navItems: NavigationItem[] = [
-    { label: 'Inicio',    path: '/home' },
-    { label: 'Acerca de', path: '/about' },
-    { label: 'Contacto',  path: '/contact' },
-    { label: 'Login',     path: '/login', isSpecial: true }
-  ];
+  
+  private dialog = inject(MatDialogModule);
+
+login():void {
+
+  this.dialog.open(Login);
+
+
+
+}
+
+
 }
