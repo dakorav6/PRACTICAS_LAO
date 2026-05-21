@@ -6,8 +6,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
 
-import { MatDialogModule } from '@angular/material/dialog';
-import { Login } from '../login/login';
+import { MatDialogModule , MatDialog } from '@angular/material/dialog';
+import { Login } from '../login/login'
+
+
+
+
+
 
 
 // Nombre semántico correcto en Angular
@@ -27,8 +32,7 @@ interface NavigationItem {
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatDialogModule,
-    Login,
+   MatDialogModule, 
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
@@ -37,11 +41,12 @@ export class NavBarComponent {
   public readonly appName = 'MiApp';
 
   
-  private dialog = inject(MatDialogModule);
+  private dialog = inject(MatDialog);
 
-login():void {
+loginModal():void {
 
   this.dialog.open(Login);
+
 
 
 
